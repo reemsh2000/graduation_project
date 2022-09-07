@@ -22,12 +22,13 @@ CREATE TABLE users(
 CREATE TABLE healthcare_videos(
     id SERIAL PRIMARY KEY,
     title TEXT,
-    url TEXT
+    image TEXT
 );
 CREATE TABLE articles(
     id SERIAL PRIMARY KEY,
     title TEXT,
-    content TEXT
+    content TEXT,
+    image TEXT
 );
 CREATE TABLE natural_ingradients(
     id SERIAL PRIMARY KEY,
@@ -39,7 +40,8 @@ CREATE TABLE inspirational_stories(
     id SERIAL PRIMARY KEY,
     user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
     title TEXT,
-    content TEXT
+    content TEXT,
+    image TEXT
 );
 
 CREATE TABLE Activities(
