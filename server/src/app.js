@@ -10,7 +10,7 @@ const { error404, errors } = require('./controllers/errors');
 
 const app = express();
 
-app.set('port', process.env.PORT || 5000);
+app.set('port', process.env.PORT || 4000);
 app.disable('x-powered-by');
 app.use(compression());
 app.use(cookieParser());
