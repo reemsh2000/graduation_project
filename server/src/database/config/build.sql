@@ -4,6 +4,7 @@ DROP
   healthcare_videos, 
   articles, 
   natural_ingradients, 
+  activities,
   inspirational_stories CASCADE;
 CREATE TABLE users(
   id SERIAL PRIMARY KEY, 
@@ -20,12 +21,10 @@ CREATE TABLE healthcare_videos(
   id SERIAL PRIMARY KEY, title TEXT, image TEXT
 );
 CREATE TABLE articles(
-  id SERIAL PRIMARY KEY, title TEXT, content TEXT, 
-  image TEXT
+  id SERIAL PRIMARY KEY, title TEXT, content TEXT,image TEXT
 );
 CREATE TABLE natural_ingradients(
-  id SERIAL PRIMARY KEY, name TEXT, calorie FLOAT, 
-  image TEXT
+  id SERIAL PRIMARY KEY, name TEXT, calorie FLOAT,image TEXT
 );
 CREATE TABLE inspirational_stories(
   id SERIAL PRIMARY KEY, 
@@ -34,7 +33,7 @@ CREATE TABLE inspirational_stories(
   content TEXT, 
   image TEXT
 );
-CREATE TABLE Activities(
+CREATE TABLE activities(
   id SERIAL PRIMARY KEY, name TEXT, description TEXT, 
   url TEXT NOT NULL, burnt_calories INTEGER, 
   restrections TEXT []
