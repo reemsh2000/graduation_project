@@ -23,7 +23,7 @@ The lack of healthy options at nearby restaurants and grocery stores.
 People may not be aware of better lifestyle practices.
 
 --------------
- 1.3 System Objectives 
+### 1.3 System Objectives 
 
 
 Make the process of taking care of health easier by giving notices about the appropriate time to eat and exercise.
