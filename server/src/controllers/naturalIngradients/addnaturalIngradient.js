@@ -1,11 +1,10 @@
 const { addnaturalIngradientQuery } = require("../../database/queries");
 
 const addnaturalIngradient = async (req, res) => {
+  const { name, calorie, image } = req.body;
   try {
-    const result = await addnaturalIngradientQuery();
-    if (result.rowCount) {
-      return res.json({ data: result.rows });
-    }
+    await addnaturalIngradientQuery(name, calorie, image);
+    return res.status(201).json({ message: "added successfully" });
   } catch (error) {
     console.log(error);
   }

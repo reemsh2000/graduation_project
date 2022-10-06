@@ -1,11 +1,10 @@
 const { addActivityQuery } = require("../../database/queries");
 
 const addActivity = async (req, res) => {
+  const { name, burnt_calories, url } = req.body;
   try {
-    const result = await addActivityQuery();
-    if (result.rowCount) {
-      return res.json({ data: result.rows });
-    }
+    await addActivityQuery(name, burnt_calories, url);
+    return res.status(201).json({ message: "Activity added successfully" });
   } catch (error) {
     console.log(error);
   }
