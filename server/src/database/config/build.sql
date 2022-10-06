@@ -6,7 +6,7 @@ DROP
   natural_ingradients, 
   activities,
   inspirational_stories CASCADE;
-  
+
 CREATE TABLE users(
 id SERIAL PRIMARY KEY,
 name VARCHAR(50) NOT NULL,
@@ -31,7 +31,6 @@ title TEXT,
 content TEXT,
 image TEXT
 );
-
 
 CREATE TABLE natural_ingradients(
 id SERIAL PRIMARY KEY,
