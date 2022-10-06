@@ -35,7 +35,7 @@ image TEXT
 CREATE TABLE natural_ingradients(
 id SERIAL PRIMARY KEY,
 name TEXT,
-calorie FLOAT,
+calorie TEXT,
 image TEXT
 );
 
@@ -51,7 +51,6 @@ CREATE TABLE activities(
 id SERIAL PRIMARY KEY,
 name TEXT,
 description TEXT,
-name Text, 
 url TEXT NOT NULL,
 burnt_calories INTEGER,
 restrections TEXT []
