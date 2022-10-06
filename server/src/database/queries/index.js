@@ -9,6 +9,10 @@ const addActivityQuery = require("./activities/addActivityQuery");
 const addArticleQuery = require("./articles/addArticleQuery");
 const addHealthCareVideoQuery = require("./healthCareVideos/addHealthCareVideoQuery");
 const addnaturalIngradientQuery = require("./naturalIngradients/addnaturalIngradientQuery");
+const addInspirationalStoryQuery = require("./inspirationalStories/addInspirationalStoryQuery");
+const deleteInspirationalStoryQuery = require("./inspirationalStories/deleteInspirationalStoryQuery");
+const editInspirationalStoryQuery = require("./inspirationalStories/editInspirationalStoryQuery");
+const getInspirationalStoryByIdQuery = require("./inspirationalStories/getInspirationalStoryByIdQuery");
 
 module.exports = {
   getArticlesQuery,
@@ -22,4 +26,8 @@ module.exports = {
   addHealthCareVideoQuery,
   addArticleQuery,
   addActivityQuery,
+  addInspirationalStoryQuery,
+  deleteInspirationalStoryQuery,
+  editInspirationalStoryQuery,
+  getInspirationalStoryByIdQuery,
 };
