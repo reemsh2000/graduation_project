@@ -1,10 +1,14 @@
-const getArticlesQuery = require("./getArticlesQuery");
-const getActivitiesQuery = require("./getActivitiesQuery");
-const getNaturalIngradientsQuery = require("./getNaturalIngradientsQuery");
-const getHealthCareVideosQuery = require("./getHealthCareVideosQuery");
-const getInspirationalStoriesQuery = require("./getInspirationalStoriesQuery");
-const getUserByEmailQuery = require("./getUserByEmailQuery");
-const insertNewUserQuery = require("./insertNewUserQuery");
+const getArticlesQuery = require("./articles/getArticlesQuery");
+const getActivitiesQuery = require("./activities/getActivitiesQuery");
+const getNaturalIngradientsQuery = require("./naturalIngradients/getNaturalIngradientsQuery");
+const getHealthCareVideosQuery = require("./healthCareVideos/getHealthCareVideosQuery");
+const getInspirationalStoriesQuery = require("./inspirationalStories/getInspirationalStoriesQuery");
+const getUserByEmailQuery = require("./users/getUserByEmailQuery");
+const insertNewUserQuery = require("./users/insertNewUserQuery");
+const addActivityQuery = require("./activities/addActivityQuery");
+const addArticleQuery = require("./articles/addArticleQuery");
+const addHealthCareVideoQuery = require("./healthCareVideos/addHealthCareVideoQuery");
+const addnaturalIngradientQuery = require("./naturalIngradients/addnaturalIngradientQuery");
 
 module.exports = {
   getArticlesQuery,
@@ -14,4 +18,8 @@ module.exports = {
   getInspirationalStoriesQuery,
   getUserByEmailQuery,
   insertNewUserQuery,
+  addnaturalIngradientQuery,
+  addHealthCareVideoQuery,
+  addArticleQuery,
+  addActivityQuery,
 };

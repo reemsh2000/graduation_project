@@ -7,7 +7,10 @@ const getInspirationalStories = require("./inspirationalStories/getInspirational
 const signup = require("./users/signup");
 const login = require("./users/login");
 const getProfileData = require("./users/getProfileData");
-
+const addActivity = require("./activities/addActivity");
+const addArticle = require("./articles/addArticle");
+const addHealthCareVideo = require("./healthCareVideos/addHealthCareVideo");
+const addnaturalIngradient = require("./naturalIngradients/addnaturalIngradient");
 module.exports = {
   getRecipe,
   getArticles,
@@ -19,4 +22,9 @@ module.exports = {
   signup,
   login,
   getProfileData,
+  addnaturalIngradient,
+  addHealthCareVideo,
+  addArticle,
+  addActivity
+
 };
