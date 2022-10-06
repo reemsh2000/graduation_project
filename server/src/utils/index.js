@@ -4,6 +4,6 @@ const asyncSignToken = require("./asyncSignToken");
 
 module.exports = {
   signupValidation,
-  loginSchema,
+  loginValidation,
   asyncSignToken,
 };
