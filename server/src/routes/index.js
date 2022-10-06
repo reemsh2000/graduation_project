@@ -6,6 +6,8 @@ const {
   getHealthCareVideos,
   getNaturalIngradients,
   getInspirationalStories,
+  login,
+  signup,
 } = require("../controllers");
 
 router.get("/", (req, res) => {
@@ -18,4 +20,6 @@ router.get("/healthCareVideos", getHealthCareVideos);
 router.get("/naturalIngradients", getNaturalIngradients);
 router.get("/inspirationalStories", getInspirationalStories);
 
+router.post("/login", login);
+router.post("/signup", signup);
 module.exports = router;
