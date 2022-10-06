@@ -13,6 +13,7 @@ const addInspirationalStoryQuery = require("./inspirationalStories/addInspiratio
 const deleteInspirationalStoryQuery = require("./inspirationalStories/deleteInspirationalStoryQuery");
 const editInspirationalStoryQuery = require("./inspirationalStories/editInspirationalStoryQuery");
 const getInspirationalStoryByIdQuery = require("./inspirationalStories/getInspirationalStoryByIdQuery");
+const updateUserProfileQuery = require("./users/updateUserProfileQuery");
 
 module.exports = {
   getArticlesQuery,
@@ -30,4 +31,5 @@ module.exports = {
   deleteInspirationalStoryQuery,
   editInspirationalStoryQuery,
   getInspirationalStoryByIdQuery,
+  updateUserProfileQuery,
 };

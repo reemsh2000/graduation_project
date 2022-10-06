@@ -16,6 +16,7 @@ const {
   addInspirationalStory,
   editInspirationalStory,
   deleteInspirationalStory,
+  updateUserProfile
 } = require("../controllers");
 
 router.get("/", (req, res) => {
@@ -34,6 +35,7 @@ router.post("/signup", signup);
 router.post("/addInspirationalStory", addInspirationalStory);
 
 router.put("/editInspirationalStory", editInspirationalStory);
+router.put("/updateUserProfile", updateUserProfile);
 
 router.delete("/inspirationalStory/:storyId", deleteInspirationalStory);
 
