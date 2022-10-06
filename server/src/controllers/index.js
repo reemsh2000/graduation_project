@@ -11,6 +11,9 @@ const addActivity = require("./activities/addActivity");
 const addArticle = require("./articles/addArticle");
 const addHealthCareVideo = require("./healthCareVideos/addHealthCareVideo");
 const addnaturalIngradient = require("./naturalIngradients/addnaturalIngradient");
+const addInspirationalStory = require("./inspirationalStories/addInspirationalStory");
+const editInspirationalStory = require("./inspirationalStories/editInspirationalStory");
+const deleteInspirationalStory = require("./inspirationalStories/deleteInspirationalStory");
 module.exports = {
   getRecipe,
   getArticles,
@@ -25,6 +28,8 @@ module.exports = {
   addnaturalIngradient,
   addHealthCareVideo,
   addArticle,
-  addActivity
-
+  addActivity,
+  addInspirationalStory,
+  editInspirationalStory,
+  deleteInspirationalStory,
 };

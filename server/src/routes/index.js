@@ -12,7 +12,10 @@ const {
   addArticle,
   addHealthCareVideo,
   addnaturalIngradient,
-  addActivity
+  addActivity,
+  addInspirationalStory,
+  editInspirationalStory,
+  deleteInspirationalStory,
 } = require("../controllers");
 
 router.get("/", (req, res) => {
@@ -28,10 +31,16 @@ router.get("/userProfile/:email", getProfileData);
 
 router.post("/login", login);
 router.post("/signup", signup);
+router.post("/addInspirationalStory", addInspirationalStory);
 
-//Admin routes 
-router.post("/article",addArticle)
-router.post("/healthCareVideo",addHealthCareVideo)
-router.post("/naturalIngradient",addnaturalIngradient)
-router.post("/activity",addActivity)
+router.put("/editInspirationalStory", editInspirationalStory);
+
+router.delete("/inspirationalStory/:storyId", deleteInspirationalStory);
+
+//Admin routes
+router.post("/article", addArticle);
+router.post("/healthCareVideo", addHealthCareVideo);
+router.post("/naturalIngradient", addnaturalIngradient);
+router.post("/activity", addActivity);
+
 module.exports = router;
