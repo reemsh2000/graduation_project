@@ -16,7 +16,8 @@ mobile TEXT,
 height FLOAT,
 weight FLOAT,
 dob DATE,
-profile_image TEXT
+profile_image TEXT,
+isAdmin BOOLEAN
 );
 
 CREATE TABLE healthcare_videos(
