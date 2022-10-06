@@ -4,21 +4,17 @@ const {
 } = require("../../database/queries");
 
 const updateUserProfile = async (req, res) => {
-  const { email, mobile, height, weight, dob, image } = req.body;
+  const { email } = req.body;
   try {
     const { rows, rowCount } = await await getUserByEmailQuery(email);
+   console.log({rows, rowCount})
     if (rowCount) {
-      await updateUserProfileQuery({
-        mobile,
-        height,
-        weight,
-        dob,
-        image,
-        userId: rows[0].id,
-      });
+        console.log("hi")
+      const res=await updateUserProfileQuery(req.body,rows[0].id);
+      console.log({res})
       return res.status(201).json({ message: "updated successfully" });
     } else {
-      return res.status(404).json({ message: "Invalid Email" });
+      return res.status(404).json({ message: "user does not exist" });
     }
   } catch (error) {
     return res.status(400).json({ message: "Invalid Email" });

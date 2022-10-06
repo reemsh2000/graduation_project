@@ -14,6 +14,8 @@ const addnaturalIngradient = require("./naturalIngradients/addnaturalIngradient"
 const addInspirationalStory = require("./inspirationalStories/addInspirationalStory");
 const editInspirationalStory = require("./inspirationalStories/editInspirationalStory");
 const deleteInspirationalStory = require("./inspirationalStories/deleteInspirationalStory");
+const updateUserProfile = require("./users/updateUserProfile");
+
 module.exports = {
   getRecipe,
   getArticles,
@@ -32,4 +34,5 @@ module.exports = {
   addInspirationalStory,
   editInspirationalStory,
   deleteInspirationalStory,
+  updateUserProfile,
 };
