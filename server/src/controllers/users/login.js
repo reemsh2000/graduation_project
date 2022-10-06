@@ -1,9 +1,9 @@
 const { compare } = require("bcrypt");
 const { getUserByEmailQuery } = require("../../database/queries");
-const { loginSchema, asyncSignToken } = require("../../utils");
+const { loginValidation, asyncSignToken } = require("../../utils");
 
 const login = async (req, res) => {
-  await loginSchema.validateAsync(req.body);
+  await loginValidation.validateAsync(req.body);
   const { rows } = await getUserByEmailQuery(req.body.email);
   if (!rows.length) {
     return res.status(400).json({ message: "Invalid Email or Password" });
