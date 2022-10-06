@@ -1,26 +1,26 @@
-require('env2')('.env');
-const { Pool } = require('pg');
+require("env2")(".env");
+const { Pool } = require("pg");
 
 const { DATABASE_URL, TEST_DB_URL, DEV_DB_URL } = process.env;
-
-let dbUrl = '';
+console.log({ hi: process.env.NODE_ENV });
+let dbUrl = "";
 switch (process.env.NODE_ENV) {
-  case 'test':
+  case "test":
     dbUrl = TEST_DB_URL;
     break;
-  case 'development':
+  case "development":
     dbUrl = DEV_DB_URL;
     break;
-  case 'production':
+  case "production":
     dbUrl = DATABASE_URL;
     break;
   default:
-    throw new Error('NO DATA BASE FOUND !');
+    throw new Error("NO DATA BASE FOUND !");
 }
 
 const options = {
   connectionString: dbUrl,
-  ssl: { rejectUnauthorized: false },
+  ssl: false,
 };
 
 module.exports = new Pool(options);

@@ -1,10 +1,11 @@
 BEGIN;
-DROP TABLE IF EXISTS users,
-                     healthcare_videos,
-                     articles,
-                     natural_ingradients,
-                     inspirational_stories CASCADE;
-
+DROP 
+  TABLE IF EXISTS users, 
+  healthcare_videos, 
+  articles, 
+  natural_ingradients, 
+  activities,
+  inspirational_stories CASCADE;
 CREATE TABLE users(
 id SERIAL PRIMARY KEY,
 name VARCHAR(50) NOT NULL,
